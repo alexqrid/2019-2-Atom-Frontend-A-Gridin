@@ -78,8 +78,8 @@
     "lint": "npm run lint:js && npm run lint:dup && npm run lint:css",
     "lint-fix": "eslint --fix",
     "clean": "rm -rf dist",
-    "test": "CI=true react-scripts test --env=jsdom",
-	"test:coverage": "npm test -- --coverage",
+    "test": "CI=true npm run test:engine && npm run test:unit && npm run lint",
+	  "test:coverage": "npm test -- --coverage",
     "test:engine": "check-engine",
     "test:sec": "npm audit || true",
     "test:unit": "cross-env NODE_ENV=test jest",
@@ -96,5 +96,6 @@
   "engines": {
     "npm": ">=6",
     "node": ">=8"
-  }
+  },
+  "private": true
 }
