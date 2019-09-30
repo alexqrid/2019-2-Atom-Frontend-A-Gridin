@@ -25,6 +25,8 @@ nonUniqueElements([10, 9, 10, 10, 9, 8]) == [10, 9, 10, 10, 9]
  */
 
 function nonUniqueElements(data) {
-  // your solution goes here
-  return data
+  return data.filter(function(a){
+    return data.indexOf(a) !== data.lastIndexOf(a)
+})
 }
+export default nonUniqueElements
