@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/2019-2-Atom-Frontend-A-Gridin/static/css/main.b4eae362.chunk.css",
+    "main.js": "/2019-2-Atom-Frontend-A-Gridin/static/js/main.a50081be.chunk.js",
+    "main.js.map": "/2019-2-Atom-Frontend-A-Gridin/static/js/main.a50081be.chunk.js.map",
+    "runtime-main.js": "/2019-2-Atom-Frontend-A-Gridin/static/js/runtime-main.28c22d01.js",
+    "runtime-main.js.map": "/2019-2-Atom-Frontend-A-Gridin/static/js/runtime-main.28c22d01.js.map",
+    "static/js/2.e4e3fe6f.chunk.js": "/2019-2-Atom-Frontend-A-Gridin/static/js/2.e4e3fe6f.chunk.js",
+    "static/js/2.e4e3fe6f.chunk.js.map": "/2019-2-Atom-Frontend-A-Gridin/static/js/2.e4e3fe6f.chunk.js.map",
+    "index.html": "/2019-2-Atom-Frontend-A-Gridin/index.html",
+    "precache-manifest.335a79eb15665bddd4007e67bd9d5adf.js": "/2019-2-Atom-Frontend-A-Gridin/precache-manifest.335a79eb15665bddd4007e67bd9d5adf.js",
+    "service-worker.js": "/2019-2-Atom-Frontend-A-Gridin/service-worker.js",
+    "static/css/main.b4eae362.chunk.css.map": "/2019-2-Atom-Frontend-A-Gridin/static/css/main.b4eae362.chunk.css.map",
+    "static/media/logo.svg": "/2019-2-Atom-Frontend-A-Gridin/static/media/logo.a55f1c43.svg"
+  }
+}
