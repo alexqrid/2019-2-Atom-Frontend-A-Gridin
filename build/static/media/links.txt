@@ -1,0 +1,2 @@
+clip https://image.flaticon.com/icons/svg/0/177.svg
+send message https://image.flaticon.com/icons/svg/1161/1161783.svg
