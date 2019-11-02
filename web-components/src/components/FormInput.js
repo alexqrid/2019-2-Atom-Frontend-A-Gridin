@@ -1,41 +1,18 @@
-/* eslint-disable semi */
-/* eslint-disable no-underscore-dangle */
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
-    :host {
-        display: flex;
-        flex-direction: row;
-        height: 50px;
-        box-sizing: border-box;
-        background-color: #FFFFFF ;
-        align-item: 
-    }
-        
         input {
             border: 0;
-            outline: 0;
-            width: 100%;
-            height: 90%;
+            outline: none;
+            width: calc(100% - 2px);
         }
-        .clip {
-            height: 32px;
-            width: 40px;
-            margin: 5px 15px;
-            background: url(https://image.flaticon.com/icons/svg/0/177.svg);
-            background-repeat: no-repeat;
-        }
-        .send {
-            height: 32px;
-            width: 40px;
-            margin: 5px 15px;
-            background: url(https://image.flaticon.com/icons/svg/309/309395.svg);
-            background-repeat: no-repeat;
+
+        :host {
+            display: inline-block;
+            border: 1px solid rgba(25, 25, 25, 0.32);
         }
     </style>
-    <button class='clip'></button>
     <input type="text">
-    <button class='send'></button>
 `;
 
 class FormInput extends HTMLElement {
@@ -45,7 +22,6 @@ class FormInput extends HTMLElement {
         this._shadowRoot.appendChild(template.content.cloneNode(true));
 
         this.$input = this.shadowRoot.querySelector('input');
-        
     }
 
     static get observedAttributes() {
