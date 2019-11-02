@@ -52,9 +52,11 @@ class MessageItem extends HTMLElement {
       this.$text = this._shadowRoot.querySelector('.text');
       this.$timestamp = this._shadowRoot.querySelector('.time');
     }
+    
     static get observedAttributes() {
         return ['name', 'text', 'timestamp'];
       }
+
     attributeChangedCallback(name, oldValue, newValue) {
         switch (name) {
             case 'text':
@@ -80,6 +82,7 @@ class MessageItem extends HTMLElement {
         };
         return this.messageObject;
       }
+      
     _renderMessage() {
         this.$name.innerHTML = this._name;
         this.$text.innerHTML = this._text;
