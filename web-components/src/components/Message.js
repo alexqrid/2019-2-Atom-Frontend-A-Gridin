@@ -1,5 +1,3 @@
-/* eslint-disable semi */
-/* eslint-disable no-underscore-dangle */
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
@@ -38,21 +36,20 @@ template.innerHTML = `
         <div class='text'></div>
         <div class='time'></div>
     </div>
-`
+`;
 class MessageItem extends HTMLElement {
-    
-    constructor() {
+      constructor() {
       super();
       this._shadowRoot = this.attachShadow({ mode: 'open' });
       this._shadowRoot.appendChild(template.content.cloneNode(true));
-  
+
       this.$message = this._shadowRoot.querySelector('.message');
-  
+
       this.$name = this._shadowRoot.querySelector('.name');
       this.$text = this._shadowRoot.querySelector('.text');
       this.$timestamp = this._shadowRoot.querySelector('.time');
     }
-    
+
     static get observedAttributes() {
         return ['name', 'text', 'timestamp'];
       }
@@ -73,7 +70,7 @@ class MessageItem extends HTMLElement {
         }
         this._renderMessage();
     }
-    
+
     toObject() {
         this.messageObject = {
           name: this.$name.innerHTML,
@@ -82,7 +79,7 @@ class MessageItem extends HTMLElement {
         };
         return this.messageObject;
       }
-      
+
     _renderMessage() {
         this.$name.innerHTML = this._name;
         this.$text.innerHTML = this._text;

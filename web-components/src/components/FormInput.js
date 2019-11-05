@@ -1,5 +1,3 @@
-/* eslint-disable semi */
-/* eslint-disable no-underscore-dangle */
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
@@ -39,13 +37,13 @@ template.innerHTML = `
 `;
 
 class FormInput extends HTMLElement {
-    constructor () {
+    constructor() {
         super();
         this._shadowRoot = this.attachShadow({ mode: 'open' });
         this._shadowRoot.appendChild(template.content.cloneNode(true));
 
         this.$input = this.shadowRoot.querySelector('input');
-        /* this.$button = this.shadowRoot.querySelector('send');      
+        /* this.$button = this.shadowRoot.querySelector('send');
         вот я хочу взять эту кнопочку и навесить на неё ивент,
         чтобы по нажатию на неё отправлялось сообщение,
         но сама логика отправки сообщения зашита в файле "MessageForm.js"
@@ -56,8 +54,9 @@ class FormInput extends HTMLElement {
         buttonClick(){
             this.dispatchEvent(new Event('submit'));
         }
-        Всплывёт ли это событие выше и обработается ли обработчиком _onSubmit из файла "MessageForm.js"
-        если в данном классе FormInput нет обработчика события submit?
+        Всплывёт ли это событие выше и обработается ли обработчиком
+        _onSubmit из файла "MessageForm.js"если в данном классе (FormInput)
+        нет обработчика события submit?
         Какой подход более правильный, как реализовать отправку сообщения по нажатию на кнопку?
         */
     }

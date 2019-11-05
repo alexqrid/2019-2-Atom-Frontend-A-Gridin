@@ -1,6 +1,3 @@
-/* eslint-disable func-names */
-/* eslint-disable semi */
-/* eslint-disable no-underscore-dangle */
 const template = document.createElement('template');
 template.innerHTML = `
     <style>
@@ -75,7 +72,7 @@ template.innerHTML = `
 `;
 
 class MessageForm extends HTMLElement {
-    constructor () {
+    constructor() {
         super();
         this._shadowRoot = this.attachShadow({ mode: 'open' });
         this._shadowRoot.appendChild(template.content.cloneNode(true));
@@ -84,14 +81,14 @@ class MessageForm extends HTMLElement {
         this.$messagesList = this._shadowRoot.querySelector('.messagesList');
 
         this.$form.addEventListener('submit', this._onSubmit.bind(this));
-        this.$form.addEventListener('keypress', this._onKeyPress.bind(this)); 
+        this.$form.addEventListener('keypress', this._onKeyPress.bind(this));
         this.Id = 0;
-        this.$form.addEventListener('click',this._click.bind(this)) 
+        this.$form.addEventListener('click', this._click.bind(this));
     }
 
     connectedCallback() {
-      if (`chat ${  this.Id}` in localStorage) {
-        this.messages = JSON.parse(localStorage.getItem(`chat ${  this.Id}`));
+      if (`chat ${this.Id}` in localStorage) {
+        this.messages = JSON.parse(localStorage.getItem(`chat ${this.Id}`));
       } else {
         this.messages = [];
       }
@@ -109,7 +106,7 @@ class MessageForm extends HTMLElement {
         const msgStorage = msg.toObject();
         this.$messagesList.appendChild(msg);
         this.messages.push(msgStorage);
-        localStorage.setItem(`chat ${  this.Id}`, JSON.stringify(this.messages));
+        localStorage.setItem(`chat ${this.Id}`, JSON.stringify(this.messages));
       }
     }
 
