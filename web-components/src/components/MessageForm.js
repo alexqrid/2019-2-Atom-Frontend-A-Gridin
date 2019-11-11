@@ -83,7 +83,6 @@ class MessageForm extends HTMLElement {
         this.$form.addEventListener('submit', this._onSubmit.bind(this));
         this.$form.addEventListener('keypress', this._onKeyPress.bind(this));
         this.Id = 0;
-        this.$form.addEventListener('click', this._click.bind(this));
     }
 
     connectedCallback() {
